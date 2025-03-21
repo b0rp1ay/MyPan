@@ -43,7 +43,9 @@ public class register extends BaseServlet {
                 }
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            //回显错误信息
+            webContext.setVariable("register_errorMsg",e.getMessage());
         }
         //Thymeleaf渲染
         templateEngine.process("index",webContext,resp.getWriter());

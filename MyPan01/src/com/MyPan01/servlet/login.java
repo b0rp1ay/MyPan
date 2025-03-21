@@ -31,11 +31,10 @@ public class login extends BaseServlet {
                     //登录成功
                     webContext.setVariable("login_errorMsg","登录成功"+email);
                 }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            //throw new RuntimeException(e);
+            webContext.setVariable("login_errorMsg",e.getMessage());
         }
         //渲染thymeleaf
         //WebContext webContext = new WebContext(JakartaServletWebApplication.buildApplication(getServletContext()).buildExchange(request,response));
