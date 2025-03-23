@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>查询结果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+<div class="container">
+    <div class="card-wrap">
+        <div class="card border-0 shadow card--query is-show" id="query">
+            <div class="card-body">
+                <h2 class="card-title">数据如下</h2>
+
+                <!-- 查询结果表格 -->
+                <table class="query-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>邮箱</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Thymeleaf 渲染数据 -->
+                    <tr th:each="user : ${users}">
+                        <td th:text="${user.id}"></td>
+                        <td th:text="${user.username}"></td>
+                        <td th:text="${user.email}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--回显错误信息-->
+                <p style="color: red" th:text="${query_errorMsg}"></p>
+            </div>
+            <div>
+                <button class="btn btn-back js-btn" onclick="window.location.href='/MyPan01/index.html'"><i class="fas fa-angle-left"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

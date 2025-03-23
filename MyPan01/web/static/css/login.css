@@ -239,6 +239,9 @@ body.is-login {
     background-position: 100% 50%
 }
 
+body.is-query{
+    background-position: 50% 0%
+}
 .card {
     transition: all .3s .1s ease-out
 }
@@ -266,4 +269,58 @@ body.is-login {
     border-color: #a07941;
     position: relative;
     left: 50px;
+}
+.card--query .card-title {
+    color: #a7bfe8; /* 主题色 - 蓝色 */
+}
+
+.card--query .badge {
+    background-color: #a7bfe8;
+}
+
+.card--query .btn {
+    background-color: #a7bfe8;
+}
+
+.card--query .btn:hover {
+    background-color: #fff;
+    color: #a7bfe8 !important;
+    font-weight: 700;
+    border: 2px solid rgba(167, 191, 232, .25);
+}
+
+.card--query .btn:focus {
+    box-shadow: 0 0 0 .2rem rgba(167, 191, 232, .25);
+}
+
+.card--query .form-control {
+    color: #a7bfe8;
+    border-color: rgba(167, 191, 232, .25);
+}
+
+.card--query .form-control:focus {
+    box-shadow: 0 0 0 .2rem rgba(167, 191, 232, .25);
+}
+
+/* 表格样式 */
+.card--query .query-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.card--query .query-table th,
+.card--query .query-table td {
+    padding: 10px;
+    border: 1px solid rgba(167, 191, 232, .25);
+    text-align: center;
+}
+
+.card--query .query-table th {
+    background-color: #a7bfe8;
+    color: white;
+}
+
+.card--query .query-table tr:nth-child(even) {
+    background-color: rgba(167, 191, 232, 0.1);
 }

@@ -29,7 +29,10 @@ public class login extends BaseServlet {
             try(ResultSet resultSet = statement.executeQuery(sql)){
                 if(resultSet.next()){
                     //登录成功
-                    webContext.setVariable("login_errorMsg","登录成功"+email);
+                    //webContext.setVariable("login_errorMsg","登录成功"+email);
+                    //进行重定向
+                    //response.sendRedirect("/Query");
+                    //return;
                 }
             }
         } catch (SQLException e) {
