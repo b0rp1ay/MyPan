@@ -14,7 +14,6 @@ MyPan01 是基于 Java Servlet + Thymeleaf + Bootstrap 的简单网盘应用，�
 
 ## 技术栈
 
-* Java 8+
 * Servlet 4.0（jakarta.servlet-api）
 * Thymeleaf 3.x
 * Bootstrap 5.x
@@ -82,11 +81,6 @@ MyPan01/
 
 * 点击文件名链接，即可下载对应文件，浏览器弹出另存为对话框。
 
-## 自定义扩展
 
-* 如需支持文件删除、重命名等功能，可在 `DownloadServlet` 基础上新增对应 Servlet。
-* 若要使用数据库存储文件元数据，可在 `BaseServlet` 中初始化 DataSource，并在 `FileInfo` 实体中添加字段，配合 JDBC 操作。
-
-## 联系
 
 
